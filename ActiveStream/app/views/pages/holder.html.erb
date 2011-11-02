@@ -21,6 +21,7 @@
       <% end %>
       <% end %>
       <%= form_for @betasignup, :url => { :action => "create" }, :html => {:class => "nifty_form"} do |f| %>
+        <%= render 'shared/error_messages', :object => f.object %>
 				<input type="text" name="betasignups[username]" id="name" value="" placeholder="Enter your real or gamer name"> <br> 	
 				<input type="text" name="betasignups[email]" id="email" value="" placeholder="Enter your email address"> <br>
 				<button type="submit" class="submit" id="betasignups_submit" name="commit">Sign up for Beta</button>
@@ -36,10 +37,10 @@
 
   		<div class="platforms">
 				<ul>
-          <li><%= image_tag 'windows1.png',:media => 'screen' %>
-          <li><%= image_tag 'playstation1.png',:media => 'screen' %>
-          <li><%= image_tag 'wii1.png',:media => 'screen' %>
-          <li><%= image_tag 'xbox1.png',:media => 'screen' %>
+          <li><%= image_tag 'windows1.png',:media => 'screen' , :onmouseover => "this.src='/images/windows.png'", :onmouseout => "this.src='/images/windows1.png'"%>
+          <li><%= image_tag 'playstation1.png',:media => 'screen', :onmouseover => "this.src='/images/playstation.png'", :onmouseout => "this.src='/images/playstation1.png'" %>
+          <li><%= image_tag 'wii1.png',:media => 'screen' , :onmouseover => "this.src='/images/wii.png'", :onmouseout => "this.src='/images/wii1.png'"%>
+          <li><%= image_tag 'xbox1.png',:media => 'screen', :onmouseover => "this.src='/images/xbox.png'", :onmouseout => "this.src='/images/xbox1.png'" %>
 				</ul>
 			</div>
 </div>

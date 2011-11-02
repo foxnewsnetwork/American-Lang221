@@ -341,3 +341,11 @@ html[xmlns] .clearfix {
 * html .clearfix {
 	height: 1%;
 }
+
+#error_explanation p{
+	font-family: 'Droid Sans', arial, serif;
+	color: #F88017;
+	text-shadow:#150517 -1px -1px 0px;
+	letter-spacing:1px;
+	line-height: 20px;
+}
