@@ -1,11 +1,35 @@
-<h1><%= @title %></h1>
-<p>Welcome to the <%= @title %> splash page. We're still in development and so we're not quite open for business. But rest assured, our coders and busy locked away in our code-dungeons, given plenty of junk food, never exposed to natural sunlight, and furiously pulling together the stream.</p>
-<p>In the meantime, check out what we're about and leave us your name - we'd love to have you play around with our beta!</p>
-<ul class="splash_button">
-	<li>
-		<%= link_to "About us", about_path, :class => "about_button round", :title => "About" %>
-	</li>
-	<li>
-		<%= link_to "Contact", about_path, :class => "contact_button round", :title => "Contact" %>
-	</li>
-</ul>
+		<div id="container">
+			<div id="header">
+				<div id="icon">
+					<img src="./Polo Mobile App_files/logo.png" href="#">
+				</div>
+				<div id="popup">
+					<div id="popwrap">Indigio allows you to go on an adventure in a fantasy world and be rewarded with real life things. </div>
+				</div>
+			</div>
+			
+			<div id="splash">
+                <div id="formwrap">
+					<form id="emailform" action="http://getpoloapp.com/#" method="post" onsubmit="pageTracker._trackEvent(&#39;Goals&#39;,&#39;Fb Signups&#39;,&#39;Signups&#39;);"><input type="hidden" name="ip" id="ip" value="98.207.62.24">
+						<input type="text" name="name" id="name" value="" placeholder="Enter your real or gamer name"> <br> 	
+						<input type="text" name="email" id="email" value="" placeholder="Enter your email address"> <br>
+						<button type="submit" class="submit">Sign up for Beta</button>
+					</form>
+					<br>
+					<p>We will never share or sell your info.</p>         
+				</div>
+				<div id="error"></div></div><div id="uid"></div>
+				<div id="footer_bottom">
+				<div class="copyright">© 2011 Ingidio - All rights reserved</div>
+				<div class="platforms">
+				<ul>
+					<li><img src="./Polo Mobile App_files/windows1.png"></li>
+<li><%= image_tag 'windows1.png',:media => 'screen' %>    
+					<li><img src="./Polo Mobile App_files/playstation1.png"></li>
+					<li><img src="./Polo Mobile App_files/wii1.png"></li>
+					<li><img src="./Polo Mobile App_files/xbox1.png"></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+

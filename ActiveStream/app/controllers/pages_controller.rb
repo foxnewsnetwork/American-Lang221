@@ -23,6 +23,7 @@ class PagesController < ApplicationController
       flash[:success] = "Sign Up Success!"
       redirect_to '/success'
     else 
+      flash[:failure] = "Oops, please check your name or password."
       render 'holder'
     end
   end

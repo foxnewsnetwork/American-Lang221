@@ -1,0 +1,11 @@
+<h1><%= @title %></h1>
+<p>Welcome to the <%= @title %> splash page. We're still in development and so we're not quite open for business. But rest assured, our coders and busy locked away in our code-dungeons, given plenty of junk food, never exposed to natural sunlight, and furiously pulling together the stream.</p>
+<p>In the meantime, check out what we're about and leave us your name - we'd love to have you play around with our beta!</p>
+<ul class="splash_button">
+	<li>
+		<%= link_to "About us", about_path, :class => "about_button round", :title => "About" %>
+	</li>
+	<li>
+		<%= link_to "Contact", about_path, :class => "contact_button round", :title => "Contact" %>
+	</li>
+</ul>

@@ -280,7 +280,7 @@ li {
 #footer_bottom {
 	margin: 20px auto;
 	width: 100%;
-        }
+}
 
 .copyright {
 	clear: both;
@@ -311,7 +311,7 @@ li {
    	width: 50px;
    	height: 50px;
    	margin-top: 0px; /* Half the height */
-  	margin-left: 50%; /* Half the width */
+  	margin-left: 860%; /* Half the width */
 }
 	
 .bottom_logo {
