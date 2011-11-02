@@ -1,0 +1,2 @@
+module BetasignupsHelper
+end

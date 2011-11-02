@@ -1,0 +1,9 @@
+<h1>Betasignups#create</h1>
+<p>Find me in app/views/betasignups/create.html.erb</p>
+
+<%= form_for(@betasignup) do |f| %>
+  <%= render 'fields', :f => f%> 
+  <div class="action">
+    <%= f.submit "Sign up" %>
+  </div>
+<% end %>

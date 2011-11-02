@@ -1,9 +1,15 @@
 ActiveStream::Application.routes.draw do
-  get "pages/home"
 
+  resources :betasignups
+
+
+  match "create", :to => "pages#create"
+
+  match "/success", :to => "pages#success"
   
   match "about", :to => "pages#about"
   match "contact", :to => "pages#contact"
+  match "holder", :to => "pages#holder"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -54,7 +60,7 @@ ActiveStream::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => "pages#home"
+  root :to => "pages#holder"
 
   # See how all your routes lay out with "rake routes"
 

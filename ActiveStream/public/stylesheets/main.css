@@ -1,0 +1,343 @@
+@charset "UTF-8";
+/* CSS Document */
+
+@import url(http://fonts.googleapis.com/css?family=Droid Sans&subset=latin);
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans);
+
+@font-face {
+	font-family: 'UbuntuTitlingBold';
+	src: url('./UbuntuTitling-Bold-webfont.eot');
+	src: local('./UbuntuTitling-Bold-webfont.eot'), url('UbuntuTitling-Bold-webfont.woff') format('woff'), url('UbuntuTitling-Bold-webfont.ttf') format('truetype'), url('UbuntuTitling-Bold-webfont.svg#webfontbRfTTujy') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body {
+	margin: 0px;
+	padding: 0px;
+	font: 'Droid Sans', arial, serif;
+    font-size:18px;
+    color: #ffffff;
+	}
+		
+h1 {
+	font-family: 'Droid Sans', arial, serif;
+	font-size:72px;
+	color: #ffffff;
+	text-shadow:#150517 -1px -1px 0px;
+	letter-spacing:2px;
+	line-height: 40px;
+	}
+
+h2 {
+	font-family: 'Droid Sans', arial, serif;
+	font-size:48px;
+	color: #8f8f8f;
+	line-height: 50px;
+	letter-spacing:2px;}
+
+h3 {
+	font-family: 'Droid Sans', arial, serif;
+	font-size:24px;
+	color: #a1a1a1;
+	line-height: 50px;
+	letter-spacing: 0px;
+	}
+	
+h4 {
+	font-family: 'Droid Sans', arial, serif;
+	font-size:18px;
+	color: #8f8f8f;
+	line-height: 25px;
+	letter-spacing:1px;
+	}
+	
+code {
+	font-family: Helvetica, sans-serif;
+	font-size: 14px
+	}
+	
+p {
+	font-family: 'Droid Sans', arial, serif;
+	font-size:18px;
+	color:#FFFFFF
+	letter-spacing:1px;
+}
+
+sub {
+    font-family: 'Droid Sans', arial, serif;
+	font-size: 12px;
+    vertical-align: super;
+    color: #198EE7;
+	}
+	
+a {
+	font-family: 'Droid Sans', arial, serif;
+	color: #198EE7;
+	text-decoration: none;
+	}
+	
+a[href*="#"] {  
+  cursor: help; 
+	}	 
+	
+b {
+    line-height: 30px;
+    }
+	
+#container {
+     margin-top: 180px;
+    }
+	
+#splash {
+    text-align: center;
+    clear: both;
+	}
+		
+#splash2 {
+	display:none;
+	clear: both;
+	text-align: center;
+	}
+#error {
+	color:#FF0000;
+}
+
+#uid{font-size:1.4em;font-weight:400;}
+#uid a:hover{color:#8f8f8f}
+
+#header {
+    position: relative;
+    left: 50%;
+    margin: 0px -250px 0 -260px;
+    float: left;
+	}
+
+#icon {
+margin-bottom: 20px;
+float:left;
+}
+	
+#icon img {
+    height: 190px;
+    width: 290px;
+}
+     
+#popup {
+        height: 150px;
+        width: 370px;
+        float: left;
+        margin-top: 60px;
+		}
+		
+#popwrap {
+		width: 300px;
+		text-align: left;
+        padding-left: 10px;
+		/* font */
+        font-weight: 600;
+        text-shadow: 0 1px 0 rgba(0,0,0,0.4);
+		font: 15px/22px "etica-1","etica-2",'Droid Sans', arial, serif;
+		font-size:18px;
+		color:#FFFFFF
+		letter-spacing:1px;
+		}
+		
+/*----------------------- Begin Privacy Page Styling ---------------------------------*/
+
+#container_privacy {
+	margin-top: 0px;
+	}
+
+#wrapper {
+    width: 600px;
+    position: relative;
+    left: 50%;
+    margin: 0px -250px 0 -260px;
+    float: left;
+    }
+
+#icon_privacy {
+	margin: 10px auto 0px auto;
+	text-align:center;
+	}	
+		
+/*----------------------- Begin Form Input Styling ---------------------------------*/
+
+form input {
+    width: 230px;
+}
+
+input, textarea {
+    -moz-border-radius: 3px 3px 3px 3px;
+    -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1) inset;
+    border: 1px solid #BBBBBB;
+    padding: 5px;
+    margin: 10px 5px;
+}
+
+form #name {
+	margin: 0px 0px;
+}
+
+input, textarea, select {
+    background: none repeat scroll 0 0 #FFF;
+    color: #8f8f8f;
+    font: 14px/1 'Droid Sans', arial, serif;
+    text-align: left;
+}
+
+/*----------------------- End Form Input Styling ---------------------------------*/
+
+/*----------------------- Begin CSS Button Styling by Kyle Bragger ------------------------*/
+
+    /* FIXME :before and :after styles are borked in FF 3.5 */
+    button {
+        line-height: 1;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        border: none;
+        border: 1px solid #FFF;
+        background: #198ee7;
+        color: #fff;
+        padding: 4px 15px;
+		background: -webkit-gradient(linear, left top, left bottom, from(#5C87B2), to(#3374B4)); /* for webkit browsers */
+        background: -moz-linear-gradient(top,  #5C87B2,  #3374B4); /* for firefox 3.6+ */
+       /* position: relative;*/
+        cursor: pointer;
+        font-weight: 600;
+        text-shadow: 0 1px 0 rgba(0,0,0,0.4);
+		font: 15px/22px "etica-1","etica-2",'Droid Sans', arial, serif;
+    	text-align: center;
+    }
+    
+    button:before {
+        content: '';
+        border-top: 1px solid #63b3ef;
+       /* position: absolute;*/
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 88%;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+    }
+    
+    button:active {
+        background: #0a4ad9;
+        background: -webkit-gradient(linear, left top, left bottom, from(#0a4ad9), to(#1372e1)); /* for webkit browsers */
+        background: -moz-linear-gradient(top,  #0a4ad9,  #1372e1); /* for firefox 3.6+ */
+        text-shadow: 0 -1px 0 rgba(0,0,0,0.4);
+    }
+    
+    button:active:before {
+        border: none;
+        border-top: none;
+    }
+    
+    button:active:after {
+        content: '';
+        border: none;
+        border-top: none;
+        border-bottom: 1px solid #408fe8;
+        /*position: absolute;*/
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 88%;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+    }
+    
+/*----------------------- End CSS Button Styling by Kyle Bragger ------------------------*/
+	
+ul {
+	padding: 0;
+	list-style:none;
+	list-style-position: inside;
+	list-style-type:none;
+	width: 250px;
+ 	margin: 0 auto;
+	}
+	
+li {
+	padding: 0 0 0 0;
+	margin:0;
+	font-family:Helvetica, sans-serif;
+	font-size:12px;
+	float: left;
+	width: 25%;
+	}
+	
+#footer_container {
+	margin: 0 auto;
+	width: 960px;
+	}
+
+#footer_bottom {
+	margin: 20px auto;
+	width: 100%;
+        }
+
+.copyright {
+	clear: both;
+	font-family:Helvetica, sans-serif;
+	font-size:10px;
+	color: #a1a1a1;
+	text-align: center;
+        clear: both;
+	}
+	
+.copyright a {
+	font-family:Helvetica, sans-serif;
+	font-size:11px;
+	color: #a1a1a1;
+	text-decoration:underline;
+	}
+
+.platforms {
+	clear: both;
+	font-family: 'Droid Sans', arial, serif;
+	font-size:11px;
+	margin: 12px auto;
+	}
+	
+.platforms img {
+  	position: relative;
+   	left: 50%;
+   	width: 50px;
+   	height: 50px;
+   	margin-top: 0px; /* Half the height */
+  	margin-left: 50%; /* Half the width */
+}
+	
+.bottom_logo {
+	float:right;
+	width: 300px;
+	text-align: right;
+	}
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+ 
+.clearfix {
+	display: inline-block;
+	margin-left: 15px;
+}
+ 
+html[xmlns] .clearfix {
+	display: block;
+}
+ 
+* html .clearfix {
+	height: 1%;
+}

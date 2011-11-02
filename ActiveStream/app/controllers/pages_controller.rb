@@ -10,5 +10,21 @@ class PagesController < ApplicationController
   def contact
 		@title = "Contact us"
   end
+  
+  def holder
+    @betasignup = Betasignups.new
+  end
+
+
+  def create
+    @betasignup = Betasignups.new(params[:betasignups])
+
+    if @betasignup.save 
+      flash[:success] = "Sign Up Success!"
+      redirect_to '/success'
+    else 
+      render 'holder'
+    end
+  end
 
 end

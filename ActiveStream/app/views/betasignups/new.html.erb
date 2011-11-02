@@ -1,0 +1,8 @@
+<h1>Betasignups#new</h1>
+<p>Find me in app/views/betasignups/new.html.erb</p>
+
+<%= form_for @betasignup, :url => { :action => "create" }, :html => {:class => "nifty_form"} do |f| %>
+  <%= f.text_field :username %>
+  <%= f.text_field :email %>
+  <%= f.submit "Create" %>
+<% end %>
