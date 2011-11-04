@@ -26,5 +26,7 @@ class PagesController < ApplicationController
       render 'holder'
     end
   end
+  def success
+  end
 
 end
