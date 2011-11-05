@@ -18,14 +18,24 @@ class PagesController < ApplicationController
 
   def create
     @betasignup = Betasignups.new(params[:betasignups])
+	
+    if request.xhr?
+      puts 'xhr request'
+    end
 
     if @betasignup.save 
       flash[:success] = "Sign Up Success!"
-      redirect_to '/success'
-    else 
-      render 'holder'
+    else
+      flash[:failure] = "Failure Failed!"
     end
+
+    respond_to do |format|
+      format.html { redirect_to '/' }
+      format.js
+    end
+
   end
+
   def success
   end
 

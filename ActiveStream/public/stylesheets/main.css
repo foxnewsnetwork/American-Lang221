@@ -349,3 +349,10 @@ html[xmlns] .clearfix {
 	letter-spacing:1px;
 	line-height: 20px;
 }
+
+.error_form {
+	display:none;
+}
+.success_message {
+	display:none;
+}

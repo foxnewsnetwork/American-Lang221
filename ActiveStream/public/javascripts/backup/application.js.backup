@@ -1,9 +1,13 @@
 // Place your application-specific JavaScript functions and classes here
 // This file is automatically included by javascript_include_tag :defaults
-
+alert('get to m first');
+alert(xhr.statusText);
+alert('get to me');
 jQuery.ajaxSetup({ 
   'beforeSend': function(xhr) {xhr.setRequestHeader("Accept", "text/javascript")}
 })
+
+alert('passsetup');
 
 jQuery.fn.submitWithAjax = function() {
   this.submit(function() {
@@ -13,8 +17,17 @@ jQuery.fn.submitWithAjax = function() {
   return this;
 };
 
-$(document).ready(function() {
+alert('pass me');
+/*$(document).ready(function() {
   $("#new_betasignups").submitWithAjax();
-})
+})*/
 
+$('#new_betasignups').click(function() {
+  alert('cool!');
+  $.ajax({
+  type: "POST",
+    data: form.serialize()
+  });
+  return false;
+})
 

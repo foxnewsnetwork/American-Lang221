@@ -1,0 +1,6 @@
+<%= form_for @betasignup, :url => { :action => "create" }, :html => {:class => "nifty_form"} do |f| %>
+  <%= render "shared/error_messages", :object => f.object %> 
+<input type="text" name="betasignups[username]" id="name" value="" placeholder="Enter your real or gamer name"> <br>
+<input type="text" name="betasignups[email]" id="email" value="" placeholder="Enter your email address"> <br> 
+<button type="submit" class="submit" id="betasignups_submit" name="commit">Sign up for Beta</button>
+<% end %>

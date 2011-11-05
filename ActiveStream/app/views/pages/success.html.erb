@@ -1,30 +1,40 @@
-		<div id="container">
-			<div id="header">
-				<div id="icon">
+<div id="container">
+	<div id="header">
+		<div id="icon">
 
-          <%= image_tag 'logo.png',:media => 'screen' %>
-				</div>
-				<div id="popup">
-					<div id="popwrap">Indigio allows you to go on an adventure in a fantasy world and be rewarded with real life things. </div>
-				</div>
-			</div>
+			<img src="http://i1138.photobucket.com/albums/n526/ingidio/logo1-1.png" href="#">
+		</div>
+		<div id="popup">
+  		<div id="popwrap">
+      <%= render 'description' %>
+    </div> 
+	</div>
+</div>
 			
-			<div id="splash">
-          <%= render 'successmessage' %>
-          <br>
-          <p>We're still in development and so we're not quite open for business. </p>
-          <p> But rest assured, our coders and busy locked away in our code-dungeons, given plenty of junk food, <br>never exposed to natural sunlight, and furiously pulling together the stream.</p>         
-				</div>
-				<div id="error"></div></div><div id="uid"></div>
-				<div id="footer_bottom">
-				<div class="copyright">© 2011 Ingidio - All rights reserved</div>
-				<div class="platforms">
+<div id="splash">
+   <div id="formwrap">
+		<%= render "successmessage" %>
+		<br>
+		<p>
+		We're still in development and so we're not quite open for business. <br>
+		But rest assured, our coders and busy locked away in our code-dungeons, <br>
+		given plenty of junk food, never exposed to natural sunlight, <br>
+		and furiously pulling together the stream.
+		
+		</p>
+		</div>
+</div>
+<div id="uid"></div>
+<div id="footer_bottom">
+	  <div class="copyright">© 2011 Ingidio - All rights reserved</div>
+
+  		<div class="platforms">
 				<ul>
-          <li><%= image_tag 'windows1.png',:media => 'screen' %>
-          <li><%= image_tag 'playstation1.png',:media => 'screen' %>
-          <li><%= image_tag 'wii1.png',:media => 'screen' %>
-          <li><%= image_tag 'xbox1.png',:media => 'screen' %>
+          <li><%= image_tag 'windows1.png',:media => 'screen' , :onmouseover => "this.src='/images/windows.png'", :onmouseout => "this.src='/images/windows1.png'"%>
+          <li><%= image_tag 'playstation1.png',:media => 'screen', :onmouseover => "this.src='/images/playstation.png'", :onmouseout => "this.src='/images/playstation1.png'" %>
+          <li><%= image_tag 'wii1.png',:media => 'screen' , :onmouseover => "this.src='/images/wii.png'", :onmouseout => "this.src='/images/wii1.png'"%>
+          <li><%= image_tag 'xbox1.png',:media => 'screen', :onmouseover => "this.src='/images/xbox.png'", :onmouseout => "this.src='/images/xbox1.png'" %>
 				</ul>
 			</div>
-		</div>
-	</div>
+</div>
+</div>
