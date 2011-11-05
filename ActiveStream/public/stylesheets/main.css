@@ -353,6 +353,6 @@ html[xmlns] .clearfix {
 .error_form {
 	display:none;
 }
-.success_message {
+#success_message {
 	display:none;
 }

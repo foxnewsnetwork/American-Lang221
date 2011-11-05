@@ -2,11 +2,11 @@ $("#flash_success").remove();
 $("#flash_failure").remove();
 $(".error_form").remove();
 
-
 if ('<%= flash.delete(:failure) %>' == '') {
   $("form").hide("slow");
   $("form").before('<%= escape_javascript(render 'successmessage') %>');
-  $("form").remove();
+  $("#success_message").show("slow");
+  //$("form").remove();
 } else {
   $("#new_betasignups").before('<%= flash.delete(:failure) %><%= escape_javascript(render 'shared/errors') %>');
   $(".error_form").show("slow");
