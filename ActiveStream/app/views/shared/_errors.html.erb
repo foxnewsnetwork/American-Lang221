@@ -1,0 +1,4 @@
+<%= form_for @betasignup, :url => { :action => "create" }, :html => {:class => "error_form"} do |f| %>
+  <%= render "shared/error_messages", :object => f.object %>
+<% end %>
+

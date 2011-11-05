@@ -13,26 +13,21 @@
 			
 <div id="splash">
    <div id="formwrap">
-      <% flash.each do |key, value| %>
-      <% if flash[key] %>
-      <div class="<%= key %>" id="flash">
-         <h2><%= flash[key] %></h2>
-      </div>
-      <% end %>
-      <% end %>
-      <%= form_for @betasignup, :url => { :action => "create" }, :html => {:class => "nifty_form"} do |f| %>
-        <%= render 'shared/error_messages', :object => f.object %>
-				<input type="text" name="betasignups[username]" id="name" value="" placeholder="Enter your real or gamer name"> <br> 	
-				<input type="text" name="betasignups[email]" id="email" value="" placeholder="Enter your email address"> <br>
-				<button type="submit" class="submit" id="betasignups_submit" name="commit">Sign up for Beta</button>
-        <% end %>
+
+<!--<%- flash.each do |name, msg| -%> 
+  <%= content_tag :div, msg, :id => "flash_#{name}" %>
+<%- end -%>-->
+<div id="myform">
+<%= render 'shared/form' %>
+</div>
+		</div>
+
 				<br>
 				<p>We will never share or sell your info.</p>         
-		</div>
 		<div id="error"></div>
-</div>
-<div id="uid"></div>
-<div id="footer_bottom">
+	</div>
+	<div id="uid"></div>
+	<div id="footer_bottom">
 	  <div class="copyright">© 2011 Ingidio - All rights reserved</div>
 
   		<div class="platforms">
