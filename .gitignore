@@ -1,4 +1,9 @@
 ProjectKiip/obj/*
 ProjectKiip/bin/
 ProjectKiip/bin/*
-ProjectKiip/ExternalKiip/D3D9Interceptor/D3D9Wrapper/*.sdf
+ExternalKiip/D3D9Interceptor/D3D9Wrapper/*.sdf
+*.*sdf
+*.sdf
+ExternalKiip/D3D9Interceptor/D3D9Wrapper/Debug/*
+ExternalKiip/D3D9Interceptor/D3D9Wrapper/ipch/*
+*.exe

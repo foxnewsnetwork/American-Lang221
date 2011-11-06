@@ -1,0 +1,1 @@
+Either go to Project->BaseCode Properties->VC++ Directories and add the name of the folder you used to store these guys or navigate to the BaseCode.props xml file and add the directory in there under the <Libraries></Libraries> tags

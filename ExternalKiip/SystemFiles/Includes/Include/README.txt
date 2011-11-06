@@ -1,0 +1,1 @@
+If you're using Visual Studios 2010 (why the fuck wouldn't you be?) navigate to your basesheet.props file or click on Project->BaseCode Properties->VC++ Directories and add in the name of wherever folder you are using to store these headers.
