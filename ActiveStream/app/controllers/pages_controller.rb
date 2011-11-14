@@ -1,4 +1,5 @@
 class PagesController < ApplicationController
+  before_filter :authenticate_user!, :only => :index
   def home
 		@title = "ActiveStream"
   end
@@ -35,6 +36,10 @@ class PagesController < ApplicationController
     end
 
   end
+
+   def index
+    @betasignups = Betasignups.all
+   end
 
   def success
   end
