@@ -1,5 +1,7 @@
 ActiveStream::Application.routes.draw do
 
+  devise_for :users
+
   resources :betasignups
 
 
@@ -11,7 +13,7 @@ ActiveStream::Application.routes.draw do
   match "contact", :to => "pages#contact"
   match "holder", :to => "pages#holder"
   match "/test", :to => "pages#home"
-
+  match "index", :to => "pages#index"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

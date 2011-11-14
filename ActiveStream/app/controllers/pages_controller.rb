@@ -1,4 +1,5 @@
 class PagesController < ApplicationController
+  before_filter :authenticate_user!, :only => :index
   def home
 		@title = "ActiveStream"
   end
@@ -18,14 +19,28 @@ class PagesController < ApplicationController
 
   def create
     @betasignup = Betasignups.new(params[:betasignups])
+	
+    if request.xhr?
+      puts 'xhr request'
+    end
 
     if @betasignup.save 
       flash[:success] = "Sign Up Success!"
-      redirect_to '/success'
-    else 
-      render 'holder'
+    else
+      flash[:failure] = "Failure Failed!"
     end
+
+    respond_to do |format|
+      format.html { redirect_to '/' }
+      format.js
+    end
+
   end
+
+   def index
+    @betasignups = Betasignups.all
+   end
+
   def success
   end
 

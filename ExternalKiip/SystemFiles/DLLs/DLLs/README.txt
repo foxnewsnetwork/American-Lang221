@@ -1,0 +1,1 @@
+If you're running a windows machine, Copy and paste these files into your system32 folder. If you encounter any conflicts (you shouldn't unless you've installed this stuff before), feel free to ignore them at your own peril.

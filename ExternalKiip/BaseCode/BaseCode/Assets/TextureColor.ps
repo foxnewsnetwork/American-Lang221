@@ -1,0 +1,31 @@
+
+uniform float4 Color;
+
+struct VS_OUTPUT
+{
+    float4 Position         : POSITION;   // vertex position
+    float4 TexCoord         : TEXCOORD0;  // vertex interpolation value
+    float3 Normal           : TEXCOORD1;  // vertex normal
+};
+
+struct PS_OUTPUT
+{
+    float4 Color    : COLOR0;
+};
+
+sampler s = sampler_state
+{ 
+    MinFilter = Linear;
+    MagFilter = Linear;
+};/* : register( s0 );*/
+
+PS_OUTPUT PShaderEntry( VS_OUTPUT input )
+{
+    PS_OUTPUT Output;
+    
+    float4 TexColor = tex2D( s, float2(input.TexCoord.x, input.TexCoord.y) );
+    //float3 NormalizedNormal = normalize(input.Normal);
+    Output.Color = float4(TexColor.x * Color.x, TexColor.y * Color.y, TexColor.z * Color.z, TexColor.w * Color.w);
+    
+    return Output;
+}

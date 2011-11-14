@@ -1,0 +1,15 @@
+<div id ="signups_list">
+<table>
+<tr>
+  <th>User Name</th>
+  <th>Email</th>
+  </tr>
+<% @betasignups.each do |betasignup| %>
+<tr>
+<td><%= betasignup.username %> </td>
+<td><%= betasignup.email %>  </td>
+</tr>
+  <% end %>
+
+</table>
+    </div>

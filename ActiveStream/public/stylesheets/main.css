@@ -3,7 +3,11 @@
 
 @import url(http://fonts.googleapis.com/css?family=Droid Sans&subset=latin);
 @import url(http://fonts.googleapis.com/css?family=Droid+Sans);
+#signups_list {
+    font-family: 'Droid Sans', arial, serif;
+	color: #ffffff;
 
+}
 @font-face {
 	font-family: 'UbuntuTitlingBold';
 	src: url('./UbuntuTitling-Bold-webfont.eot');
@@ -348,4 +352,11 @@ html[xmlns] .clearfix {
 	text-shadow:#150517 -1px -1px 0px;
 	letter-spacing:1px;
 	line-height: 20px;
+}
+
+.error_form {
+	display:none;
+}
+#success_message {
+	display:none;
 }

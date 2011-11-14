@@ -1,0 +1,16 @@
+$("#flash_success").remove();
+$("#flash_failure").remove();
+$(".error_form").remove();
+
+if ('<%= flash.delete(:failure) %>' == '') {
+  $("form").hide("slow");
+  $("form").before('<%= escape_javascript(render 'successmessage') %>');
+  $("#success_message").show("slow");
+  //$("form").remove();
+} else {
+  $("#new_betasignups").before('<%= flash.delete(:failure) %><%= escape_javascript(render 'shared/errors') %>');
+  $(".error_form").show("slow");
+  $("#new_betasignups").before('<div id="flash_success"><%= escape_javascript(flash.delete(:success)) %></div>');
+  //$("#new_betasignups").before('<div id="flash_failure"><%= escape_javascript(flash.delete(:failure)) %></div>');
+  $("#new_betasignups")[0].reset();
+}
