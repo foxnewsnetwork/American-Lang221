@@ -30,7 +30,7 @@ void App::Init(HINSTANCE hInstance, int nCmdShow)
     //
     // Create a new GraphicsDevice object based upon the type of graphics device requested in GraphicsDeviceType
     //
-#ifdef USE_D3D9
+#ifdef USE_D3D9 // wtf is this shit so if we're not using 
     if(GraphicsDeviceType == GD_D3D9)
     {
         _state.graphics = new D3D9GraphicsDevice;

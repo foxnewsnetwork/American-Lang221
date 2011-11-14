@@ -19,3 +19,51 @@ L4D2 = [12524]
 
 %% Data-importing
 % Here I import data from the csv files
+justin = importdata('uv_justin.tv_09_2010_09_2011.csv',',');
+livestream = importdata('uv_livestream.com_09_2010_09_2011.csv',',');
+own3d = importdata('uv_own3d.tv_09_2010_09_2011.csv',',');
+twitch = importdata('uv_twitch.tv_09_2010_09_2011.csv',',');
+ustream = importdata('uv_ustream.tv_09_2010_09_2011.csv',',');
+
+justin_data = justin(5:end);
+livestream_data = livestream(5:end);
+own3d_data = own3d(5:end);
+twitch_data = twitch(5:end);
+ustream_data = ustream(5:end);
+
+%% Other stuff
+% Getting data
+jd = zeros(length(twitch_data),1);
+ld = jd; td = ld; od = td; ud = od;
+
+for k = 1:length(twitch_data)
+    st1 = ParseString2Vec(justin_data{k},',');
+    jd(k,1) = conv2num( st1{2} );
+    
+    st1 = ParseString2Vec(livestream_data{k},',');
+    ld(k,1) = conv2num( st1{2} );
+    
+    st1 = ParseString2Vec(own3d_data{k},',');
+    od(k,1) = conv2num( st1{2} );
+    
+    st1 = ParseString2Vec(twitch_data{k},',');
+    td(k,1) = conv2num( st1{2} );
+    
+    st1 = ParseString2Vec(ustream_data{k},',');
+    ud(k,1) = conv2num( st1{2} );
+end
+
+%% Plotting
+% Putting it all in one
+
+x = 1:length(jd);
+plot(x, jd, x, ld, x, od, x, td, x, ud)
+title('STream
+xlabel('Months, starting on 09/2010')
+ylabel('Independent users')
+legend('justin','livestream','own3d','twitch','ustream')
+figure
+plot(x, jd+ld+od+td+ud)
+xlabel('Months, starting on 09/2010')
+ylabel('Independent users')
+legend('total')

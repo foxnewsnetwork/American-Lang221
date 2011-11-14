@@ -30,3 +30,41 @@ livestream_data = livestream(5:end);
 own3d_data = own3d(5:end);
 twitch_data = twitch(5:end);
 ustream_data = ustream(5:end);
+
+%% Other stuff
+% Getting data
+jd = zeros(length(twitch_data),1);
+ld = jd; td = ld; od = td; ud = od;
+
+for k = 1:length(twitch_data)
+    st1 = ParseString2Vec(justin_data{k},',');
+    jd(k,1) = conv2num( st1{2} );
+    
+    st2 = ParseString2Vec(livestream_data{k},',');
+    ld(k,1) = conv2num( st2{2} );
+    
+    st3 = ParseString2Vec(own3d_data{k},',');
+    od(k,1) = conv2num( st3{2} );
+    
+    st4 = ParseString2Vec(twitch_data{k},',');
+    td(k,1) = conv2num( st4{2} );
+    
+    st5 = ParseString2Vec(ustream_data{k},',');
+    ud(k,1) = conv2num( st5{2} );
+end
+
+%% Plotting
+% Putting it all in one
+
+x = 1:length(jd);
+plot(x, jd, x, ld, x, od, x, td, x, ud)
+title('Streaming service competitors')
+xlabel('Months, starting on 09/2010')
+ylabel('Independent users')
+legend('justin','livestream','own3d','twitch','ustream')
+figure
+plot(x, jd+ld+od+td+ud)
+title('Total stream market')
+xlabel('Months, starting on 09/2010')
+ylabel('Independent users')
+legend('total')
