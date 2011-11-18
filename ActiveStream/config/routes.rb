@@ -9,11 +9,12 @@ ActiveStream::Application.routes.draw do
 
   match "/success", :to => "pages#success"
   
-  match "about", :to => "pages#about"
-  match "contact", :to => "pages#contact"
-  match "holder", :to => "pages#holder"
+  #match "about", :to => "pages#about"
+  #match "contact", :to => "pages#contact"
+  #match "holder", :to => "pages#holder"
   match "/test", :to => "pages#home"
   match "index", :to => "pages#index"
+  match "/promotion", :to => "pages#promotion"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

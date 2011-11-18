@@ -1,7 +1,9 @@
 class PagesController < ApplicationController
   before_filter :authenticate_user!, :only => :index
+	layout 'application', :except => :promotion
   def home
 		@title = "ActiveStream"
+		
   end
 
   def about
@@ -11,15 +13,28 @@ class PagesController < ApplicationController
   def contact
 		@title = "Contact us"
   end
+
+  def promotion
+	@title = "Promotion"
+    @a = 'bootstrap.css'
+    @b = ''
+    @c = ''
+  end
   
   def holder
     @betasignup = Betasignups.new
+    @a = 'main.css'
+    @b = 'thickbox.css'
+    @c = 'reset.css'
   end
 
 
   def create
     @betasignup = Betasignups.new(params[:betasignups])
-	
+    @a = 'main.css'
+    @b = 'thickbox.css'
+    @c = 'reset.css'
+
     if request.xhr?
       puts 'xhr request'
     end
@@ -39,9 +54,16 @@ class PagesController < ApplicationController
 
    def index
     @betasignups = Betasignups.all
+    @a = 'main.css'
+    @b = 'thickbox.css'
+    @c = 'reset.css'
    end
 
   def success
+
+    @a = 'main.css'
+    @b = 'thickbox.css'
+    @c = 'reset.css'
   end
 
 end
